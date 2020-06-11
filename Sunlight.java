@@ -21,11 +21,28 @@ public class Sunshine
          return val;
     } 
     
+  static  int find_case(Point building_co[], Point p){
+        
+        for(Point i:building_co){
+            
+            if(p.y > i.y)
+            return 1;
+            
+            else
+            return 2;
+        }
+        
+        return 0;
+    }
+    
    
     static double find_surface(Point building_co[], Point p) 
     { 
         int n=building_co.length;
         
+            int case1= find_case(building_co,p);
+        if(case1==1){ 
+            
             double[] val=new double[n];
            
                for(int dist=0;dist<n;dist++)
@@ -55,7 +72,7 @@ public class Sunshine
         while(i<n){
             
             d_array[i]=distance(building_co[i], p);
-            System.out.println(d_array[i]);
+            
             i++;
         }
        
@@ -72,13 +89,13 @@ public class Sunshine
             
         }
         System.out.println(val[arr_index]);
-
+        }
         return 0; 
     } 
   
     public static void main(String[] args)  
     { 
-        Point Building_co[] = {new Point(4, 0), 
+        Point Building_co[] = {new Point(4, 2), 
                             new Point(4,-5),  
                             new Point(7, -5),  
                             new Point(7, 0)}; 
