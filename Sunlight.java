@@ -95,7 +95,7 @@ public class Sunshine
   
     public static void main(String[] args)  
     { 
-        Point Building_co[] = {new Point(4, 2), 
+        Point Building_co[] = {new Point(4, 0), 
                             new Point(4,-5),  
                             new Point(7, -5),  
                             new Point(7, 0)}; 
