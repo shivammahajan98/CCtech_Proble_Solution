@@ -39,7 +39,7 @@ public class Polygon
             return 2;  
     } 
   
-    static boolean doIntersect(Point p1, Point q1,  
+    static boolean Intersect(Point p1, Point q1,  
                                Point p2, Point q2)  
     { 
         
@@ -80,7 +80,7 @@ public class Polygon
     } 
   
      
-    static boolean isInside(Point polygon[], Point p) 
+    static boolean Inside(Point polygon[], Point p) 
     { 
          int n = polygon.length;
         
@@ -98,7 +98,7 @@ public class Polygon
         { 
             int next = (i + 1) % n; 
   
-            if (doIntersect(polygon[i], polygon[next], p, extreme))  
+            if (Intersect(polygon[i], polygon[next], p, extreme))  
             {  
                 if (direction(polygon[i], p, polygon[next]) == 0) 
                 { 
@@ -124,7 +124,7 @@ public class Polygon
                             new Point(1, 5)}; 
         
         Point p = new Point(3,5); 
-        if (isInside(polygon1, p)) 
+        if (Inside(polygon1, p)) 
         { 
             System.out.println("True"); 
         }  
@@ -141,7 +141,7 @@ public class Polygon
                             
         p = new Point(0, 0); 
       
-        if (isInside(polygon2, p))  
+        if (Inside(polygon2, p))  
         { 
             System.out.println("True"); 
         }  
